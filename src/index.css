@@ -1,0 +1,47 @@
+/* Import Google Font - Inter is a great modern choice */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* Import Tailwind base styles */
+@import "tailwindcss";
+
+/* Define a modern theme using CSS variables */
+@theme {
+  --font-sans: "Inter", sans-serif;
+
+  --color-background: theme(colors.white); /* <- Set to white */
+  --color-foreground: theme(colors.slate.900); /* <- Dark text on white */
+
+  --color-card: theme(colors.gray.100);
+  --color-card-foreground: theme(colors.slate.900);
+
+  --color-popover: theme(colors.gray.100);
+  --color-popover-foreground: theme(colors.slate.900);
+
+  --color-primary: theme(colors.violet.600); /* Use the violet in your logo */
+  --color-primary-foreground: theme(colors.white);
+
+  --color-secondary: theme(colors.slate.200);
+  --color-secondary-foreground: theme(colors.slate.900);
+
+  --color-muted: theme(colors.slate.400);
+  --color-muted-foreground: theme(colors.slate.500);
+
+  --color-accent: theme(colors.violet.100);
+  --color-accent-foreground: theme(colors.violet.600);
+
+  --color-destructive: theme(colors.red.600);
+  --color-destructive-foreground: theme(colors.white);
+
+  --color-border: theme(colors.slate.200);
+  --color-input: theme(colors.slate.200);
+  --color-ring: theme(colors.violet.500);
+
+  --radius: 0.5rem;
+}
+
+/* Apply base styles to the body */
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
